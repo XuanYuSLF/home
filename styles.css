@@ -1,0 +1,120 @@
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  body {
+    background-image: url("./source/background.png"); /* 替换为你的图片 URL */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 10%;
+    width: 50%;
+    background-color: rgba(63, 161, 227, 0.26);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .container:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+  
+  .title {
+    display: inline-block;
+    width: fit-content;
+  }
+
+  .container-slider {
+    position: fixed;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    border-radius: 10px; /* 添加圆角 */
+    overflow: hidden; /* 隐藏超出容器的内容 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+    background-color: #f0f0f0; /* 自定义容器背景颜色 */
+  }
+
+  .container-1 {
+    top: 200px;
+    right: 10px;
+  }
+  
+  .container-2 {
+    bottom: 200px;
+    right: 10px;
+  }
+
+  .slider {
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .slider img.active {
+    display: block;
+    opacity: 1;
+  }
+  
+  .dots {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 10px; /* 添加内边距 */
+  }
+  
+  .dot {
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin: 5px 0;
+    cursor: pointer;
+  }
+  .dots .dot.active {
+    background-color: #000;
+  }
+  
+  .navbar {
+    background-color: rgba(0, 0, 0, 0);
+    color: #fff;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar a {
+    color: #573951;
+    text-decoration: none;
+    margin-right: 10px;
+  }
+
+  .navbar a:hover {
+    color: #000000;
+    text-decoration: underline;
+  }
