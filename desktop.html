@@ -3,45 +3,240 @@
 <head>
 
     <title>StarCrow导航站</title>
+    <link rel="icon" href="./source/avatar.ico">
     <link rel="stylesheet" href="styles.css" >
-
 </head>
 <body>
+    <div class="container" style="user-select: none;">
+        <div class="card" style="--i:-4">
+            S
+            <div class="content">
+            </div>
+        </div>
+        <div class="card" style="--i:-3">
+            T
+            <div class="content">
+            </div>
+        </div>
+        <div class="card" style="--i:-2">
+            A
+            <div class="content">
+            </div>
+        </div>
+        <div class="card" style="--i:-1">
+            R
+            <div class="content">
+            </div>
+        </div>
+        <div class="card" style="--i:0">
+            ❤
+            <div class="content">
+            </div>
+        </div>
+        <div class="card" style="--i:1">
+            C
+            <div class="content">
+                <h2></h2>
+            </div>
+        </div>
+        <div class="card" style="--i:2">
+            R
+            <div class="content">
+            </div>
+        </div>
+        <div class="card" style="--i:3">
+            O
+            <div class="content">
+            </div>
+        </div>
+        <div class="card" style="--i:4">
+            W
+            <div class="content">
+            </div>
+        </div>
+    </div>
+    <div class="text" style="--i:5;user-select: none;">
+        <div calss="avatar" >     
+            <img class="avatar" src="./source/avatar.png">
+        </div>
+        你好这里是StarCrow的导航站
+        <p> ←点击左边的卡片开始吧!</p>
+    </div>
 
-    <div class="container">
-        <h1>StarCrow的导航站</h1>
-    </div>
-    <div class="container-slider container-1">
-        <div class="slider">
-            <img src="./source/image1.png" alt="Image 1">
-            <img src="./source/image2.jpg" alt="Image 2">
-            <img src="./source/image3.jpg" alt="Image 3">
-        </div>
-        <div class="dots">
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-        </div>
-    </div>
-    <div class="container-slider container-2">
-        <div class="slider">
-            <img src="./source/image4.png" alt="Image 1">
-            <img src="./source/image5.jpg" alt="Image 2">
-            <img src="./source/image6.jpg" alt="Image 3">
-        </div>
-        <div class="dots">
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-        </div>
-    </div>
-    <div class="navbar">
-        <a href="#">首页</a>
-        <a href="https://blog.blice.fun">blog</a>
-        <a href="https://games.blice.fun">吃掉你！</a>
-        <a href="docs.blice.fun">文档</a>
-        <a href="https://photos.blice.fun">画廊</a>
-    </div>
-    <script src="script.js"></script>
+    <div class="border-container"></div>
+
+
+
+
+
+
+
+
+
+
+
+        <script src="https://kit.fontawesome.com/25f41fabbd.js" crossorigin="anonymous"></script>
+         <script>
+            
+          document.addEventListener('DOMContentLoaded', function() {
+            // 获取所有卡片元素
+            const cards = document.querySelectorAll('.card');
+            // 获取文本元素
+            const text = document.querySelector('.text');
+        
+            // 添加点击事件监听器到每个卡片
+            cards.forEach(function(card) {
+                card.addEventListener('click', function() {
+                    // 移除其他卡片的点击状态
+                    cards.forEach(function(otherCard) {
+                        if (otherCard !== card) {
+                            otherCard.classList.remove('clicked');
+                        }
+                    });
+                    
+                    var notClick = `
+                    <div calss='avatar style="user-select: none;"'>
+                        <img class='avatar' src='./source/avatar.png'>
+                    </div>
+                    你好这里是StarCrow的导航站
+                    <p> ←点击左边的卡片开始吧!</p>
+                    `
+                    var content1 = `
+                    <div calss='avatar style="user-select: none;"'>
+                        <img class='avatar' src='./source/avatar1.jpg'>
+                    </div>
+                    <h3>点击下面按钮跳转到我的BLOG吧</h3>
+                    <p> ʚ •͈˽•͈ ིྀɞ </p>
+                    <a href="https://blog.enstar.tech" class="button">Click me</a>
+                    `
+
+                    var content2 = `
+                    <div calss='avatar style="user-select: none;"'>
+                        <img class='avatar' src='./source/avatar2.png'>
+                    </div>
+                    <h3>点击下面按钮跳转到我的Documents吧</h3>
+                    <p> ʕ⸝⸝⸝˙Ⱉ˙ʔ </p>
+                    <a href="https://docs.enstar.tech" class="button">Click me</a>
+
+                    `
+
+                    
+                    var content3 = `
+                    <div calss='avatar style="user-select: none;"'>
+                        <img class='avatar' src='./source/avatar3.png'>
+                    </div>
+                    <h3>点击下面按钮游玩奇葩小游戏吧</h3>
+                    <p> ૮₍ ˃ ⤙ ˂ ₎ა </p>
+                    <a href="https://games.enstar.tech" class="button">Click me</a>
+
+                    `
+
+
+                    var content4 = `
+                    <div calss='avatar style="user-select: none;"'>
+                        <img class='avatar' src='./source/avatar4.png'>
+                    </div>
+                    <h3>点击下面按钮跳转到我的影廊吧</h3>
+                    <p> ❛‿˂̵✧ </p>
+                    <a href="https://photos.enstar.tech" class="button">Click me</a>
+
+                    `
+
+
+                    var content5 = `
+                    社交媒体
+                    <p>
+                        <i class="fa-brands fa-bilibili"></i>
+                        <a href="https://space.bilibili.com/510526780 " style="color: white;">BiliBili</a>
+                    </p>
+                    <p>
+                        <i class="fa-brands fa-instagram"></i>
+                        <a href="https://www.instagram.com/xuanyuslf/ " style="color: white;">Instagram</a>
+                    </p>
+                    <p>
+                        <i class="fa-brands fa-github-alt"></i>
+                        <a href="https://github.com/xuanyuslf" style="color: white;">GitHub</a>
+                    </p>
+                    <p>
+                        <i class="fa-brands fa-square-x-twitter"></i>
+                        <a href="https://x.com/FieldStarCrow" style="color: white;">Twitter</a>
+                    </p>
+                    <p>
+                        <i class="fa-regular fa-circle"></i>
+                        <a href="https://osu.ppy.sh/users/20913390" style="color: white;">Osu</a>
+                    <p>
+                        <i class="fa-regular fa-envelope"></i>
+                        <a href="mailto:xuanyuslf@gmail.com" style="color: white;">Email</a>
+                    </p>
+
+
+
+                    `
+
+
+                    var content6 = `
+                    还没有内容啦
+                    `
+
+
+                    var content7 = `
+                    还没有内容啦
+                    `
+
+
+                    var content8 = `
+                    还没有内容啦
+                    `
+
+
+                    var content9 = `
+                    关于所用图片的版权说明
+                    <p> 本站所用图片均来自网络，如有侵权请联系我删除 </p>
+
+                    `
+
+                    
+
+                    // 切换当前卡片的点击状态
+                    this.classList.toggle('clicked');
+        
+                    // 检查特定条件是否满足
+                    const isSpecificCardClicked1 = this.classList.contains('clicked') && this.style.getPropertyValue('--i') === '-4';
+                    const isSpecificCardClicked2 = this.classList.contains('clicked') && this.style.getPropertyValue('--i') === '-3';
+                    const isSpecificCardClicked3 = this.classList.contains('clicked') && this.style.getPropertyValue('--i') === '-2';
+                    const isSpecificCardClicked4 = this.classList.contains('clicked') && this.style.getPropertyValue('--i') === '-1';
+                    const isSpecificCardClicked5 = this.classList.contains('clicked') && this.style.getPropertyValue('--i') === '0';
+                    const isSpecificCardClicked6 = this.classList.contains('clicked') && this.style.getPropertyValue('--i') === '1';
+                    const isSpecificCardClicked7 = this.classList.contains('clicked') && this.style.getPropertyValue('--i') === '2';
+                    const isSpecificCardClicked8 = this.classList.contains('clicked') && this.style.getPropertyValue('--i') === '3';
+                    const isSpecificCardClicked9 = this.classList.contains('clicked') && this.style.getPropertyValue('--i') === '4';
+                    
+                    // 根据条件更改文本内容
+                    if (isSpecificCardClicked1) {
+                        text.innerHTML = content1;
+                    } else if (isSpecificCardClicked2) {
+                        text.innerHTML = content2;
+                    } else if (isSpecificCardClicked3) {
+                        text.innerHTML = content3;
+                    } else if (isSpecificCardClicked4) {
+                        text.innerHTML =  content4;
+                    } else if (isSpecificCardClicked5) {
+                        text.innerHTML =  content5;
+                    } else if (isSpecificCardClicked6) {
+                        text.innerHTML =  content6;
+                    } else if (isSpecificCardClicked7) {
+                        text.innerHTML =  content7;
+                    } else if (isSpecificCardClicked8) {
+                        text.innerHTML =  content8;
+                    } else if (isSpecificCardClicked9) {
+                        text.innerHTML =  content9;
+                    } else {
+                        text.innerHTML = notClick;
+                    }
+                });
+            });
+        });
+      </script>
+
 </body>
 </html>
